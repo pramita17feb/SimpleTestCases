@@ -1,17 +1,13 @@
 package com.training.sanity.tests;
 
-import java.io.IOException;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
 import com.training.pom.LoginPOM;
 
-public class LoginTeacherTests extends LoginTests {
-	//private WebDriver driver;
-	//LoginPOM loginPOM = new LoginPOM(driver);
-		
+public class LoginStudentTests extends LoginTests{
+	
 	@Test
 	public void validLoginTest(WebDriver driver) {
 		/*
@@ -21,12 +17,13 @@ public class LoginTeacherTests extends LoginTests {
 		 */
 		System.out.println("this is login for teacher.");
 		loginPOM=new LoginPOM(driver);
-		loginPOM.sendUserName("pramita");
-		loginPOM.sendPassword("pramita");
+		loginPOM.sendUserName("student1");
+		loginPOM.sendPassword("student");
 		loginPOM.clickLoginBtn();
 		String actualTitle=loginPOM.pageTitle();
 		Assert.assertEquals(actualTitle, "e Learning - My education - My courses");
 		//screenShot.captureScreenShot("login1");
 
 	}
+
 }

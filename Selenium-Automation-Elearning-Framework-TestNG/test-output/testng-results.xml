@@ -1,89 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="27358" started-at="2018-12-18T18:16:26Z" finished-at="2018-12-18T18:16:53Z">
+  <suite name="Default suite" duration-ms="114215" started-at="2019-09-19T22:22:02Z" finished-at="2019-09-19T22:23:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="27358" started-at="2018-12-18T18:16:26Z" finished-at="2018-12-18T18:16:53Z">
-      <class name="com.training.regression.tests.LoginExcelTest">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="setUpBeforeClass" is-config="true" duration-ms="15" started-at="2018-12-18T23:46:26Z" finished-at="2018-12-18T23:46:26Z">
+    <test name="Default test" duration-ms="114215" started-at="2019-09-19T22:22:02Z" finished-at="2019-09-19T22:23:56Z">
+      <class name="com.training.regression.tests.ELTC_064_createCouerseComplex">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.regression.tests.ELTC_064_createCouerseComplex@3e6fa38a]" name="setUpBeforeClass" is-config="true" duration-ms="20" started-at="2019-09-19T22:22:02Z" finished-at="2019-09-19T22:22:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="setUp" is-config="true" duration-ms="5796" started-at="2018-12-18T23:46:27Z" finished-at="2018-12-18T23:46:32Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.regression.tests.ELTC_064_createCouerseComplex@3e6fa38a]" name="setUp" is-config="true" duration-ms="16257" started-at="2019-09-19T22:22:02Z" finished-at="2019-09-19T22:22:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginDBTest(java.lang.String, java.lang.String)[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="loginDBTest" duration-ms="2700" started-at="2018-12-18T23:46:32Z" data-provider="excel-inputs" finished-at="2018-12-18T23:46:35Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[hello]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin@123]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="createCourse()[pri:1, instance:com.training.regression.tests.ELTC_064_createCouerseComplex@3e6fa38a]" name="createCourse" duration-ms="13760" started-at="2019-09-19T22:22:18Z" finished-at="2019-09-19T22:22:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginDBTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="tearDown" is-config="true" duration-ms="788" started-at="2018-12-18T23:46:35Z" finished-at="2018-12-18T23:46:36Z">
+        </test-method> <!-- createCourse -->
+        <test-method status="PASS" signature="addDetailsToCourse()[pri:2, instance:com.training.regression.tests.ELTC_064_createCouerseComplex@3e6fa38a]" name="addDetailsToCourse" duration-ms="60690" started-at="2019-09-19T22:22:32Z" depends-on-methods="com.training.regression.tests.ELTC_064_createCouerseComplex.createCourse" finished-at="2019-09-19T22:23:33Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="setUp" is-config="true" duration-ms="4885" started-at="2018-12-18T23:46:36Z" finished-at="2018-12-18T23:46:41Z">
+        </test-method> <!-- addDetailsToCourse -->
+        <test-method status="PASS" signature="subscribeCourse()[pri:3, instance:com.training.regression.tests.ELTC_064_createCouerseComplex@3e6fa38a]" name="subscribeCourse" duration-ms="10585" started-at="2019-09-19T22:23:33Z" depends-on-methods="com.training.regression.tests.ELTC_064_createCouerseComplex.addDetailsToCourse" finished-at="2019-09-19T22:23:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginDBTest(java.lang.String, java.lang.String)[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="loginDBTest" duration-ms="3104" started-at="2018-12-18T23:46:41Z" data-provider="excel-inputs" finished-at="2018-12-18T23:46:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[naveen]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[testing@123]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- subscribeCourse -->
+        <test-method status="PASS" signature="verifyDetailAsAdmin()[pri:4, instance:com.training.regression.tests.ELTC_064_createCouerseComplex@3e6fa38a]" name="verifyDetailAsAdmin" duration-ms="10973" started-at="2019-09-19T22:23:43Z" depends-on-methods="com.training.regression.tests.ELTC_064_createCouerseComplex.subscribeCourse" finished-at="2019-09-19T22:23:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginDBTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="tearDown" is-config="true" duration-ms="767" started-at="2018-12-18T23:46:44Z" finished-at="2018-12-18T23:46:45Z">
+        </test-method> <!-- verifyDetailAsAdmin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.regression.tests.ELTC_064_createCouerseComplex@3e6fa38a]" name="tearDown" is-config="true" duration-ms="1891" started-at="2019-09-19T22:23:54Z" finished-at="2019-09-19T22:23:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="setUp" is-config="true" duration-ms="5306" started-at="2018-12-18T23:46:45Z" finished-at="2018-12-18T23:46:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginDBTest(java.lang.String, java.lang.String)[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="loginDBTest" duration-ms="2595" started-at="2018-12-18T23:46:50Z" data-provider="excel-inputs" finished-at="2018-12-18T23:46:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[delete]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[delete]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginDBTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="tearDown" is-config="true" duration-ms="795" started-at="2018-12-18T23:46:53Z" finished-at="2018-12-18T23:46:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.training.regression.tests.LoginExcelTest -->
+      </class> <!-- com.training.regression.tests.ELTC_064_createCouerseComplex -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

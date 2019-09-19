@@ -11,7 +11,7 @@ import com.training.readexcel.ReadExcel;
 
 public class LoginDataProviders {
 
-	@DataProvider(name = "db-inputs")
+	@DataProvider(name = "db-inputs") //database
 	public Object [][] getDBData() {
 
 		List<LoginBean> list = new ELearningDAO().getLogins(); 
@@ -30,13 +30,21 @@ public class LoginDataProviders {
 		return result;
 	}
 	
-	@DataProvider(name = "excel-inputs")
+	@DataProvider(name = "excel-inputs")// xlsx apachepoi
 	public Object[][] getExcelData(){
-		String fileName ="C:/Users/Naveen/Desktop/Testing.xlsx"; 
-		return new ApachePOIExcelRead().getExcelContent(fileName); 
+		String fileName ="C:\\Users\\PramitaGhosh\\Desktop\\testdatapoi.xlsx"; 
+		String sheetName="Sheet1";
+		return new ApachePOIExcelRead().getExcelContent(fileName,sheetName); 
 	}
 	
-	@DataProvider(name = "xls-inputs")
+	@DataProvider(name = "excel-inputs1")// xlsx apachepoi
+	public Object[][] getExcelData1(){
+		String fileName ="C:\\Users\\PramitaGhosh\\Desktop\\ELTC_065_testdata.xlsx"; 
+		String sheetName="Sheet1";
+		return new ApachePOIExcelRead().getExcelContent(fileName,sheetName); 
+	}
+	
+	@DataProvider(name = "xls-inputs")// jxl
 	public Object[][] getXLSData(){
 		// ensure you will have the title as first line in the file 
 		return new ReadExcel().getExcelData("C:/Users/Naveen/Desktop/Testing.xls", "Sheet1"); 

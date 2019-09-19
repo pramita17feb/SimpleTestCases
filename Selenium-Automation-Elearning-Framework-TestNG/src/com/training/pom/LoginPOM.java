@@ -34,6 +34,13 @@ public class LoginPOM {
 	@FindBy(xpath="//a[text()=' Sign up! ']")
 	private WebElement signUpBtn;
 	
+	@FindBy(xpath="//li[@class='dropdown avatar-user']/a")
+	private WebElement profileDropdown;
+	
+	@FindBy(id="logout_button")
+	private WebElement logOutOption;
+	
+	
 	public void sendUserName(String userName) {
 		this.userName.clear();
 		this.userName.sendKeys(userName);
@@ -65,7 +72,15 @@ public class LoginPOM {
 	}
 	
 	public String pageTitle() {
-		String title=driver.getTitle();
+		String title=this.driver.getTitle();
 		return title;
+	}
+	
+	public void clickProfileDropdown() {
+		this.profileDropdown.click(); 
+	}
+	
+	public void clickLogOut() {
+		this.logOutOption.click(); 
 	}
 }
