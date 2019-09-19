@@ -80,19 +80,19 @@ public class ELTC_066_Tests_Teacher_Student {
 		driver.quit();
 	}
 
-
+////////..........DB Test.................////////////
 	@Test
 	public void createTestByTeacher() throws InterruptedException {
 
-		//
+		//click on course link
 		
 		coursesPOM.clickCourseLink(courseNm);
 		coursepagePOM.clickTests();
 		
-		//
+		//click create test
 		testsPOM.clickCreateTest();
 		
-		//
+		//enter valid credentials to create the course
 		
 		testsPOM.enterTestNm(testNm);
 		testsPOM.clickAdvancedSettgs();
@@ -102,7 +102,7 @@ public class ELTC_066_Tests_Teacher_Student {
 		testsPOM.selectStartTimeMonthYear("Sep","2019");
 		testsPOM.passpercent("50");
 		
-		//
+		//click on proceed to questions
 		testsPOM.clickproceedtoquestnBtn();
 	}
 	
@@ -111,7 +111,7 @@ public class ELTC_066_Tests_Teacher_Student {
 		
 		testsPOM.clickmultiplechoiceIcon();
 		
-		//
+		//Add question and answers and score
 		testsPOM.enterQuestion(question);
 		testsPOM.enterMCQoption1(option1);
 		testsPOM.enterMCQoption2(option2);
@@ -122,7 +122,7 @@ public class ELTC_066_Tests_Teacher_Student {
 		testsPOM.enterScore(answerOptn, score);
 		screenShot.captureScreenShot("QuestionsDBdata");
 		
-		//
+		//click on add question
 		testsPOM.clickaddQuestion();
 		
 		screenShot.captureScreenShot("QuestionsAddedToTest");
@@ -134,13 +134,13 @@ public class ELTC_066_Tests_Teacher_Student {
 		String expectedMsg="2 questions, for a total score (all questions) of 100.";
 		String actualMsg=testsPOM.verifyMsg();
 		
-		//
+		//verify number of questions added message
 		Assert.assertEquals(actualMsg, expectedMsg);
 
-		//
+		//click on preview
 		testsPOM.clickPreview();
 		
-		//
+		//verify Start button displayed
 		Assert.assertTrue(testsPOM.verifyStartTestBtn());
 	}
 	

@@ -73,24 +73,24 @@ public class ELTC_065_TestsByTeacherComplex {
 	@Test
 	public void createTestByTeacher() throws InterruptedException {
 
-		//
+		//Click on Course link and go to test
 		coursesPOM.clickCourseLink("testCourse");
 		Thread.sleep(3000);
 		coursepagePOM.clickTests();
 		
-		//
+		//Create new Test
 		testsPOM.clickCreateTest();
 		
-		//
-		testsPOM.enterTestNm("online quiz");
+		//enter valid credentials to create the course
+		testsPOM.enterTestNm("online quiz");//Test name
 		testsPOM.clickAdvancedSettgs();
-		testsPOM.enterContext("quiz");
+		testsPOM.enterContext("quiz");// context
 		testsPOM.clickFeedbackRadioBtn();
 		testsPOM.clickEnableStartTimeChckbox();
-		testsPOM.selectStartTimeMonthYear("Oct","2019");
-		testsPOM.passpercent("50");
+		testsPOM.selectStartTimeMonthYear("Oct","2019");//select start date and time
+		testsPOM.passpercent("50");// enter pass percent 
 		
-		//
+		//click on proceed to question button
 		testsPOM.clickproceedtoquestnBtn();
 	}
 	
@@ -99,7 +99,7 @@ public class ELTC_065_TestsByTeacherComplex {
 		
 		testsPOM.clickmultiplechoiceIcon();
 		
-		//
+		//Add question, answers and related comments 
 		testsPOM.enterQuestion(question);
 		testsPOM.enterMCQoption1(option1);
 		testsPOM.enterMCQcomment1("Right Answer");
@@ -111,7 +111,7 @@ public class ELTC_065_TestsByTeacherComplex {
 		testsPOM.enterMCQcomment4("Wrong Answer");
 		screenShot.captureScreenShot("Questions");
 		
-		//
+		//click on add question
 		testsPOM.clickaddQuestion();
 		
 		screenShot.captureScreenShot("QuestionsAddedToTest");
@@ -123,13 +123,13 @@ public class ELTC_065_TestsByTeacherComplex {
 		String expectedMsg="4 questions, for a total score (all questions) of 0.";
 		String actualMsg=testsPOM.verifyMsg();
 		
-		//
+		//Validate the message after adding all 4 questions
 		Assert.assertEquals(actualMsg, expectedMsg);
 
-		//
+		//click on preview
 		testsPOM.clickPreview();
 		
-		//
+		//Verify start test button is present
 		Assert.assertTrue(testsPOM.verifyStartTestBtn());
 	}
 
